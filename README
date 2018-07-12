@@ -1,0 +1,26 @@
+INTERVALS
+---------
+
+These are some simple scripts related to the paper
+"Matrix Method for Persistence Modules on Commutative Ladders of Finite Type"
+https://arxiv.org/abs/1706.10027
+
+In particular, the script mp_tools computes the arrangement of block statuses
+given the ordering of intervals specified in that paper
+(i.e. structure of AR quiver induces a partial order on intervals b:d,
+then resolve ambiguities using reverse lex order)
+
+
+REQUIREMENTS
+------------
+numpy
+pytest (for tests)
+
+
+USAGE
+-----
+To run the main script
+>> python mp_tools.py
+
+To run the tests, (in the project folder)
+>> python -m pytest
