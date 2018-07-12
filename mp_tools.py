@@ -2,6 +2,15 @@ import intervals
 import numpy
 
 def get_data_in_paper():
+    """
+    From the ordering specified in the paper
+    "Matrix Method for Persistence Modules on Commutative Ladders of Finite Type"
+    https://arxiv.org/abs/1706.10027
+
+    i.e. structure of AR quiver induces a partial order on intervals b:d,
+    then resolve ambiguities using reverse lex order
+    """
+
     data = \
     {"fff" :
      ("4:4","3:4","3:3","2:4","2:3","1:4","2:2","1:3","1:2","1:1"),
@@ -51,3 +60,12 @@ def generate_mp_matrix(orientation):
             else:
                 ans[row,col] = "_"
     return ans
+
+
+if __name__ == "__main__":
+    data = get_data_in_paper()
+    for x in data.keys():
+        print("***********************************************************")
+        print(x)
+        print(data[x])
+        print(generate_mp_matrix(x))
